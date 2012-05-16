@@ -1,6 +1,9 @@
 CFLAGS = -O2 -Wall -Wextra -ansi -pedantic -DNDEBUG
 
-default: Array.o Grid.o
+default: liblensing.a
+
+liblensing.a: Array.o Grid.o
+	ar rcs liblensing.a Array.o Grid.o
 
 Array.o: Array.cpp Array.h
 	g++ $(CFLAGS) -c Array.cpp
@@ -8,6 +11,9 @@ Array.o: Array.cpp Array.h
 Grid.o: Grid.cpp Grid.h Array.h
 	g++ $(CFLAGS) -c Grid.cpp
 
+tests:
+	cd Tests; $(MAKE)
+
 clean:
-	rm -f *.o
+	rm -f liblensing.a *.o
 
