@@ -1,4 +1,6 @@
 Lensing
 =======
 
-Rewrite of my lensing code
+Rewrite of my lensing code.
+(c) 2012 Brendon J. Brewer
+Licence: GPL 3
