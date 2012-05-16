@@ -1,6 +1,6 @@
 CFLAGS = -O2 -Wall -Wextra -ansi -pedantic -DNDEBUG
 
-default: liblensing.a
+default: liblensing.a tests
 
 liblensing.a: Array.o Grid.o
 	ar rcs liblensing.a Array.o Grid.o
@@ -16,4 +16,5 @@ tests:
 
 clean:
 	rm -f liblensing.a *.o
+	cd Tests; $(MAKE) clean;
 

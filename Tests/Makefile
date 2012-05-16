@@ -1,8 +1,11 @@
 CFLAGS = -O0 -g -Wall -Wextra -ansi -pedantic
 
 default: Grid
-	g++ $(CFLAGS) -I.. -L.. -o Grid Grid.cpp -llensing
+
+Grid:
+	g++ $(CFLAGS) -I.. -c Grid.cpp
+	g++ -L.. -o Grid Grid.o -llensing
 
 clean:
-	rm -f *.o
+	rm -f Grid *.o
 
