@@ -33,6 +33,11 @@ void SIE::alpha(double x, double y, double& ax, double& ay) const
 		_cosTheta = -sinTheta;
 	}
 
+	// Avoid division by zero by making circular case slightly
+	// elliptical
+	if(_q == 1.)
+		_q = 0.9999999;
+
 	double xx, yy; // Coordinates in rotated frame (ellipticity)
 	double xxx, yyy; // Coordinates in rotated frame (shear)
 
