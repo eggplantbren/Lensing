@@ -1,5 +1,5 @@
-#ifndef _LENS_
-#define _LENS_
+#ifndef _Lens_
+#define _Lens_
 
 /*
 * Base class for lens models.
