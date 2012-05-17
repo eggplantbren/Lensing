@@ -10,10 +10,12 @@
 class Data
 {
 	private:
-
+		Array pixels;
+		bool loaded;
 
 	public:
-
+		Data();
+		void load(const char* filename);
 };
 
 #endif
