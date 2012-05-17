@@ -11,5 +11,7 @@
 *.la
 *.a
 
-Tests/Grid
+# Executables that get built
+TestGrid
+TestSIE
 

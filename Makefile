@@ -18,10 +18,17 @@ Lens.o: Lens.cpp Lens.h
 SIE.o: Lenses/SIE.cpp Lenses/SIE.h Lens.h
 	g++ $(CFLAGS) -c Lenses/SIE.cpp
 
-tests:
-	cd Tests; $(MAKE)
+tests: TestGrid TestSIE
+
+TestGrid: Tests/TestGrid.cpp liblensing.a
+	g++ $(CFLAGS) -c Tests/TestGrid.cpp
+	g++ -o TestGrid TestGrid.o -llensing
+
+TestSIE: Tests/TestSIE.cpp liblensing.a
+	g++ $(CFLAGS) -c Tests/TestSIE.cpp
+	g++ -o TestSIE TestSIE.o -llensing
 
 clean:
-	rm -f liblensing.a *.o Lenses/*.o
-	cd Tests; $(MAKE) clean;
+	rm -f liblensing.a *.o Lenses/*.o TestGrid TestSIE
+
 
