@@ -22,14 +22,17 @@ class SIE:public Lens
 		// Generate from prior
 		void fromPrior();
 
-		// Deflection angles
-		void alpha(double x, double y, double& ax, double& ay) const;
-
 		// M-H proposals
 		double perturb();
 
 		// Print parameters
 		void print(std::ostream& out) const;
+
+		// Deflection angles
+		void alpha(double x, double y, double& ax, double& ay) const;
+
+		// Surface mass density
+		double evaluate(double x, double y) const;
 };
 
 #endif

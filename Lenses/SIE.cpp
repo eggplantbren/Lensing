@@ -69,6 +69,17 @@ void SIE::alpha(double x, double y, double& ax, double& ay) const
 	ay += axshear*sinThetaShear + ayshear*cosThetaShear;
 }
 
+double SIE::evaluate(double x, double y) const
+{
+	 // Coordinates in rotated frame (ellipticity)
+	double xx =  cosTheta*(x - xc) + sinTheta*(y - yc);
+	double yy = -sinTheta*(x - xc) + cosTheta*(y - yc);
+
+	double rsq = xx*xx*q + yy*yy/q;
+
+	return 0.5*b/sqrt(rsq);
+}
+
 double SIE::perturb()
 {
 	return 0.;
