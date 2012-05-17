@@ -8,10 +8,10 @@ int main()
 {
 	SIE sie;
 	Grid grid(1000, 1000, -1., 1., -1., 1.);
-	Array ax, ay;
+	Array ax(1000, 1000), ay(1000, 1000);
 	sie.alphaGrid(grid, ax, ay);
-	cout<<ax<<endl;
-	cout<<ay<<endl;
+	ax.print(cout);
+	ay.print(cout);
 	return 0;
 }
 
