@@ -1,5 +1,6 @@
 #include "Grid.h"
 #include <vector>
+#include <cassert>
 
 using namespace std;
 
@@ -11,6 +12,8 @@ Grid::Grid(int ni, int nj,
 ,dx(xRange/nj), dy(yRange/ni)
 ,x(ni, nj), y(ni, nj)
 {
+	assert(ni > 0 && nj > 0 && xRange > 0. && yRange > 0.);
+
 	vector<double> xx(nj), yy(ni);
 	for(int i=0; i<ni; i++)
 		yy[i] = yMax - (i + 0.5)*dy;
