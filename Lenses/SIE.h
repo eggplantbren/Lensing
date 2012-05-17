@@ -1,7 +1,7 @@
 #ifndef _SIE_
 #define _SIE_
 
-#include "../Lens.h"
+#include <Lens.h>
 #include <ostream>
 
 class SIE:public Lens
