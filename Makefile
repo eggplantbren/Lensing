@@ -3,11 +3,14 @@ CFLAGS = -O0 -g -Wall -Wextra -ansi -pedantic # Development
 
 default: liblensing.a tests
 
-liblensing.a: Array.o Grid.o Lens.o SIE.o Source.o
-	ar rcs liblensing.a Array.o Grid.o Lens.o SIE.o Source.o
+liblensing.a: Array.o Data.o Grid.o Lens.o SIE.o Source.o
+	ar rcs liblensing.a Array.o Data.o Grid.o Lens.o SIE.o Source.o
 
 Array.o: Array.cpp Array.h
 	g++ $(CFLAGS) -c Array.cpp
+
+Data.o: Data.cpp Data.h Array.h
+	g++ $(CFLAGS) -c Data.cpp
 
 Grid.o: Grid.cpp Grid.h Array.h
 	g++ $(CFLAGS) -c Grid.cpp
