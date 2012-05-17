@@ -12,11 +12,9 @@ class SIE:public Lens
 		double q;
 		double xc;
 		double yc;
-		double theta;
+		double theta, cosTheta, sinTheta;
 		double shear;
-		double thetaShear;
-		double cosTheta, sinTheta,
-			cosThetaShear, sinThetaShear;
+		double thetaShear, cosThetaShear, sinThetaShear;
 
 	public:		
 		SIE();

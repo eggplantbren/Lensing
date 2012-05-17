@@ -1,9 +1,14 @@
 #include "SIE.h"
 #include <cmath>
+#include <RandomNumberGenerator.h>
 
 using namespace std;
 
 SIE::SIE()
+:b(1.), q(1.), xc(0.), yc(0.)
+,theta(0.), cosTheta(1.), sinTheta(0.)
+,shear(0.)
+,thetaShear(0.), cosThetaShear(1.), sinThetaShear(0.)
 {
 
 }
@@ -41,9 +46,9 @@ void SIE::alpha(double x, double y, double& ax, double& ay) const
 	* From Keeton. astro-ph/0102341
 	*/
 
-	double psi = sqrt(xx*xx*_q + yy*yy/_q);
+	double psi = sqrt(xx*xx*_q*_q + yy*yy);
 	double qq = sqrt(1.0 - _q*_q);
-	double coeff = b/qq;
+	double coeff = b*_q/qq;
 
 	double axprime = coeff*atan(qq*xx/psi);
 	double ayprime = coeff*atanh(qq*yy/psi);
