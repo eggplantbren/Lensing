@@ -5,6 +5,8 @@
 * Base class for lens models.
 */
 
+#include <ostream>
+
 class Lens
 {
 	protected:
@@ -12,6 +14,7 @@ class Lens
 
 
 	public:
+		// Generate from prior
 		virtual void fromPrior() = 0;
 
 		// Deflection angles
@@ -19,6 +22,9 @@ class Lens
 
 		// M-H proposals
 		virtual double perturb() = 0;
+
+		// Print parameters
+		virtual void print(std::ostream& out) const = 0;
 };
 
 #endif
