@@ -12,7 +12,7 @@ Array.o: Array.cpp Array.h
 Grid.o: Grid.cpp Grid.h Array.h
 	g++ $(CFLAGS) -c Grid.cpp
 
-Lens.o: Lens.cpp Lens.h
+Lens.o: Lens.cpp Lens.h Grid.h Array.h
 	g++ $(CFLAGS) -c Lens.cpp
 
 SIE.o: Lenses/SIE.cpp Lenses/SIE.h Lens.h
