@@ -1,5 +1,5 @@
-CFLAGS = -O0 -g -Wall -Wextra -ansi -pedantic
-# CFLAGS = -O2 -Wall -Wextra -ansi -pedantic -DNDEBUG
+CFLAGS = -O0 -g -Wall -Wextra -ansi -pedantic # Development
+# CFLAGS = -O2 -Wall -Wextra -ansi -pedantic -DNDEBUG # Optimized
 
 default: liblensing.a tests
 
