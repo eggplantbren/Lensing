@@ -17,9 +17,10 @@ class Grid
 	public:
 		Grid(int ni, int nj,
 			double xMin, double xMax, double yMin, double yMax);
-
 		void print(std::ostream& out) const;
 
+		// Read-only getter
+		double get_x(int i, int j) const { return x(i, j); }
 };
 
 #endif
