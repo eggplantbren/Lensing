@@ -18,7 +18,8 @@ Lens.o: Lens.cpp Lens.h Grid.h Array.h
 SIE.o: Lenses/SIE.cpp Lenses/SIE.h Lens.h
 	g++ $(CFLAGS) -c Lenses/SIE.cpp
 
-Source.o: Source.cpp Source.h
+Source.o: Source.cpp Source.h Grid.h Array.h
+	g++ $(CFLAGS) -c Source.cpp
 
 tests: TestGrid TestSIE
 
@@ -32,5 +33,4 @@ TestSIE: Tests/TestSIE.cpp liblensing.a
 
 clean:
 	rm -f liblensing.a *.o Lenses/*.o TestGrid TestSIE
-
 
