@@ -6,6 +6,8 @@
 */
 
 #include <ostream>
+#include "Grid.h"
+#include "Array.h"
 
 class Lens
 {
@@ -25,6 +27,9 @@ class Lens
 
 		// Print parameters
 		virtual void print(std::ostream& out) const = 0;
+
+		// Evaluate deflection angles on a grid
+		void alphaGrid(const Grid& grid, Array& ax, Array& ay) const;
 };
 
 #endif
