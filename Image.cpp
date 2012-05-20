@@ -15,7 +15,7 @@ Image::Image(int ni, int nj,
 
 void Image::print(ostream& out) const
 {
-	out<<ni<<' '<<nj<<' '<<xMin<<' '<<xMax<<' '<<yMin<<' '<<yMax<<' ';
+	out<<"# "<<ni<<' '<<nj<<' '<<xMin<<' '<<xMax<<' '<<yMin<<' '<<yMax<<endl;
 	pixels.print(out);
 }
 
