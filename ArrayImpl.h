@@ -36,12 +36,8 @@ Type Array2D<Type>::operator () (int i, int j) const
 template<typename Type>
 void Array2D<Type>::print(std::ostream& out) const
 {
-	for(int i=0; i<ni; i++)
-	{
-		for(int j=0; j<nj; j++)
-			out<<data[nj*i + j]<<' ';
-		out<<std::endl;
-	}
+	for(int i=0; i<size; i++)
+		out<<data[i]<<' ';
 }
 
 typedef Array2D<double> Array;

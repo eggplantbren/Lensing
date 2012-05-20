@@ -21,8 +21,8 @@ class Array2D
 		Type  operator () (int i, int j) const;
 
 		// Get size
-		int get_ni() { return ni; }
-		int get_nj() { return nj; }
+		int get_ni() const { return ni; }
+		int get_nj() const { return nj; }
 
 		// Print to stream
 		void print(std::ostream& out) const;
