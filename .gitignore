@@ -3,6 +3,9 @@
 *.lo
 *.o
 
+# Compiled header files
+*.gch
+
 # Compiled Dynamic libraries
 *.so
 
