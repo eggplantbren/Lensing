@@ -2,15 +2,6 @@
 #include <iomanip>
 
 template<typename Type>
-Array<Type>::Array()
-:ni(0), nj(0)
-,size(0)
-,data(size)
-{
-
-}
-
-template<typename Type>
 Array<Type>::Array(int ni, int nj)
 :ni(ni), nj(nj)
 ,size(ni*nj)

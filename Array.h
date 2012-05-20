@@ -13,7 +13,6 @@ class Array
 		std::vector<Type> data;
 
 	public:
-		Array();
 		Array(int ni, int nj);
 
 		// Element access
