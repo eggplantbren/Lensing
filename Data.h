@@ -5,12 +5,12 @@
 * An object of this class is a data set.
 */
 
-#include "Array.h"
+#include "Image.h"
 
 class Data
 {
 	private:
-		Array<double> pixels;
+		Image image;
 		bool loaded;
 
 	public:

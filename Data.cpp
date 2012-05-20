@@ -6,7 +6,8 @@
 using namespace std;
 
 Data::Data()
-:loaded(false)
+:image(1, 1, -1., 1., -1., 1.)
+,loaded(false)
 {
 
 }
@@ -24,10 +25,7 @@ void Data::load(const char* filename)
 		return;
 	}
 
-	double temp;
-	vector<double> vec;
-	while(fin>>temp)
-		vec.push_back(temp);
-	fin.close();
+	image.read(fin);
+	loaded = true;
 }
 
