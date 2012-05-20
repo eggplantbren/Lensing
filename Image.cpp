@@ -24,6 +24,7 @@ void Image::read(istream& in)
 	char hash;
 	in>>hash;
 	in>>ni>>nj>>xMin>>xMax>>yMin>>yMax;
+	pixels = Array<double>(ni, nj);
 	for(int i=0; i<ni; i++)
 		for(int j=0; j<nj; j++)
 			in>>pixels(i, j);
