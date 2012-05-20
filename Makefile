@@ -19,7 +19,7 @@ default:
 	cd Tests; $(MAKE)
 
 clean:
-	rm -f *.o liblensing.a
+	rm -f *.o liblensing.a *.gch
 	cd Tests; $(MAKE) clean;
 
 
