@@ -1,4 +1,5 @@
 #include <cassert>
+#include <iomanip>
 
 template<typename Type>
 Array<Type>::Array()
@@ -35,8 +36,8 @@ Type Array<Type>::operator () (int i, int j) const
 template<typename Type>
 void Array<Type>::print(std::ostream& out) const
 {
+	out<<std::setprecision(10);
 	for(int i=0; i<size; i++)
 		out<<data[i]<<' ';
 }
-
 
