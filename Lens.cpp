@@ -1,7 +1,7 @@
 #include "Lens.h"
 #include <cassert>
 
-void Lens::alphaGrid(const Grid& grid, Array& ax, Array& ay) const
+void Lens::alphaGrid(const MeshGrid& grid, Array& ax, Array& ay) const
 {
 	assert( grid.get_ni() == ax.get_ni() &&
 		grid.get_nj() == ax.get_nj() &&
@@ -30,7 +30,7 @@ double Lens::density(double x, double y, double h) const
 	return (term1 + term2)/2;
 }
 
-Array Lens::densityGrid(const Grid& grid, double h) const
+Array Lens::densityGrid(const MeshGrid& grid, double h) const
 {
 	Array results(grid.get_ni(), grid.get_nj());
 	for(int i=0; i<grid.get_ni(); i++)

@@ -8,12 +8,12 @@ LIBS = -ldnest3 -lgsl -lgslcblas -llensing
 default:
 	# Compile
 	g++ $(CFLAGS) -I .. -c TestSIE.cpp
-	g++ $(CFLAGS) -I .. -c TestGrid.cpp
+	g++ $(CFLAGS) -I .. -c TestMeshGrid.cpp
 
 	# Link
 	g++ -L .. -o TestSIE TestSIE.o $(LIBS)
-	g++ -L .. -o TestGrid TestGrid.o $(LIBS)
+	g++ -L .. -o TestMeshGrid TestMeshGrid.o $(LIBS)
 
 clean:
-	rm -f TestSIE TestGrid *.o
+	rm -f TestSIE TestMeshGrid *.o
 

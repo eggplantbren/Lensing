@@ -1,10 +1,10 @@
-#include "Grid.h"
+#include "MeshGrid.h"
 #include <vector>
 #include <cassert>
 
 using namespace std;
 
-Grid::Grid(int ni, int nj,
+MeshGrid::MeshGrid(int ni, int nj,
 	double xMin, double xMax, double yMin, double yMax)
 :ni(ni), nj(nj)
 ,xMin(xMin), xMax(xMax), yMin(yMin), yMax(yMax)
@@ -20,7 +20,7 @@ Grid::Grid(int ni, int nj,
 	for(int j=0; j<nj; j++)
 		xx[j] = xMin + (j + 0.5)*dx;
 
-	// Fill the grid
+	// Fill the MeshGrid
 	for(int i=0; i<ni; i++)
 	{
 		for(int j=0; j<nj; j++)
@@ -32,7 +32,7 @@ Grid::Grid(int ni, int nj,
 }
 
 
-void Grid::print(ostream& out) const
+void MeshGrid::print(ostream& out) const
 {
 	x.print(out);
 	y.print(out);

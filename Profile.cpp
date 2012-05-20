@@ -1,6 +1,6 @@
 #include "Profile.h"
 
-Array Profile::evaluateGrid(const Grid& grid) const
+Array Profile::evaluateGrid(const MeshGrid& grid) const
 {
 	Array result(grid.get_ni(), grid.get_nj());
 	for(int i=0; i<grid.get_ni(); i++)

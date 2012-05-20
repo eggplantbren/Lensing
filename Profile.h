@@ -5,7 +5,7 @@
 * Abstract base class for 2D profiles - lenses and Profiles
 */
 
-#include "Grid.h"
+#include "MeshGrid.h"
 #include "Array.h"
 
 class Profile
@@ -28,7 +28,7 @@ class Profile
 		virtual void print(std::ostream& out) const = 0;
 
 		// Evaluate surface brightness profile on a grid
-		Array evaluateGrid(const Grid& grid) const;
+		Array evaluateGrid(const MeshGrid& grid) const;
 };
 
 #endif
