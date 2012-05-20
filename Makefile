@@ -5,8 +5,8 @@
 CFLAGS = -O2 -Wall -Wextra -ansi -pedantic -DNDEBUG
 
 LIBS = -ldnest3 -lgsl -lgslcblas
-SOURCES = Data.cpp Image.cpp Lens.cpp MeshGrid.cpp Profile.cpp Lenses/SIE.cpp
-OBJECTS = Data.o Image.o Lens.o MeshGrid.o Profile.o SIE.o
+SOURCES = Data.cpp Image.cpp Lens.cpp MeshGrid.cpp Profile.cpp Lenses/SIE.cpp Sources/Blobby.cpp
+OBJECTS = Data.o Image.o Lens.o MeshGrid.o Profile.o SIE.o Blobby.o
 
 default:
 	# Compile all library components
