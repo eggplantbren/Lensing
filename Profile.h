@@ -1,14 +1,14 @@
-#ifndef _Source_
-#define _Source_
+#ifndef _Profile_
+#define _Profile_
 
 /*
-* Abstract base class for source surface brightness models
+* Abstract base class for 2D profiles - lenses and Profiles
 */
 
 #include "Grid.h"
 #include "Array.h"
 
-class Source
+class Profile
 {
 	protected:
 		// Parameters go here
