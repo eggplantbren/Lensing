@@ -19,3 +19,13 @@ void Image::print(ostream& out) const
 	pixels.print(out);
 }
 
+void Image::read(istream& in)
+{
+	char hash;
+	in>>hash;
+	in>>ni>>nj>>xMin>>xMax>>yMin>>yMax;
+	for(int i=0; i<ni; i++)
+		for(int j=0; j<nj; j++)
+			in>>pixels(i, j);
+}
+

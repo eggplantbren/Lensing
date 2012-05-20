@@ -18,7 +18,7 @@ class Image
 		Image(int ni, int nj,
 			double xMin, double xMax, double yMin, double yMax);
 		void print(std::ostream& out) const;
-		void read(std::istream& in) const;
+		void read(std::istream& in);
 
 		// Read-only getters
 		double get_pixel(int i, int j) const { return pixels(i, j); }
