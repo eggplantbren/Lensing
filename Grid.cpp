@@ -34,8 +34,7 @@ Grid::Grid(int ni, int nj,
 
 void Grid::print(ostream& out) const
 {
-	for(int i=0; i<ni; i++)
-		for(int j=0; j<nj; j++)
-			out<<x(i, j)<<' '<<y(i, j)<<endl;
+	x.print(out);
+	y.print(out);
 }
 
