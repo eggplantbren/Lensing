@@ -16,6 +16,11 @@ class Data
 	public:
 		Data();
 		void load(const char* filename);
+
+	// Static instance
+	private:
+		static Data instance;
+		static Data& get_instance() { return instance; }
 };
 
 #endif

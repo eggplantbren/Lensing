@@ -5,6 +5,8 @@
 
 using namespace std;
 
+Data Data::instance;
+
 Data::Data()
 :image(1, 1, -1., 1., -1., 1.)
 ,loaded(false)
