@@ -28,7 +28,7 @@ class Profile
 		virtual void print(std::ostream& out) const = 0;
 
 		// Evaluate surface brightness profile on a grid
-		Array evaluateGrid(const MeshGrid& grid) const;
+		Array<double> evaluateGrid(const MeshGrid& grid) const;
 };
 
 #endif

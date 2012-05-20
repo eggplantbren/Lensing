@@ -1,8 +1,7 @@
-#include "Array.h"
 #include <cassert>
 
 template<typename Type>
-Array2D<Type>::Array2D()
+Array<Type>::Array()
 :ni(0), nj(0)
 ,size(0)
 ,data(size)
@@ -11,7 +10,7 @@ Array2D<Type>::Array2D()
 }
 
 template<typename Type>
-Array2D<Type>::Array2D(int ni, int nj)
+Array<Type>::Array(int ni, int nj)
 :ni(ni), nj(nj)
 ,size(ni*nj)
 ,data(size)
@@ -20,25 +19,24 @@ Array2D<Type>::Array2D(int ni, int nj)
 }
 
 template<typename Type>
-Type& Array2D<Type>::operator () (int i, int j)
+Type& Array<Type>::operator () (int i, int j)
 {
 	assert(i >= 0 && i < ni && j >= 0 && j < nj);
 	return data[nj*i + j];
 }
 
 template<typename Type>
-Type Array2D<Type>::operator () (int i, int j) const
+Type Array<Type>::operator () (int i, int j) const
 {
 	assert(i >= 0 && i < ni && j >= 0 && j < nj);
 	return data[nj*i + j];
 }
 
 template<typename Type>
-void Array2D<Type>::print(std::ostream& out) const
+void Array<Type>::print(std::ostream& out) const
 {
 	for(int i=0; i<size; i++)
 		out<<data[i]<<' ';
 }
 
-typedef Array2D<double> Array;
 

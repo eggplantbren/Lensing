@@ -10,7 +10,7 @@
 class Data
 {
 	private:
-		Array pixels;
+		Array<double> pixels;
 		bool loaded;
 
 	public:

@@ -12,7 +12,7 @@ class MeshGrid
 		double xMin, xMax, yMin, yMax;
 		double xRange, yRange, dx, dy;
 
-		Array x, y;
+		Array<double> x, y;
 
 	public:
 		MeshGrid(int ni, int nj,

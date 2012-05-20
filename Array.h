@@ -6,15 +6,15 @@
 
 // Stored in row-major order
 template<typename Type>
-class Array2D
+class Array
 {
 	private:
 		int ni, nj, size;
 		std::vector<Type> data;
 
 	public:
-		Array2D();
-		Array2D(int ni, int nj);
+		Array();
+		Array(int ni, int nj);
 
 		// Element access
 		Type& operator () (int i, int j);
