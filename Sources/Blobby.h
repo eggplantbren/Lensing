@@ -16,9 +16,11 @@ class Blobby:public Profile
 
 		// Uniform latent variables
 		// (position, position, size, mass)
-		std::vector<double> u1, u2, u3, u4;
+		std::vector< std::vector<double> > U;
 
 	public:
+		Blobby();
+
 		// Generate from prior
 		void fromPrior();
 
