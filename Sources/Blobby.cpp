@@ -1,6 +1,5 @@
 #include "Blobby.h"
 #include "RandomNumberGenerator.h"
-#include "Data.h"
 #include <cassert>
 #include <cmath>
 
