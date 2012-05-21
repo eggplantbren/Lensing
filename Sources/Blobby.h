@@ -14,6 +14,18 @@ class Blobby:public Profile
 		// Maximum number of nonzero-mass blobs
 		static const int maxNumBlobs;
 
+		// Precision
+		static const double maxSigmaSquaredEval;
+
+		// Fraction of blobs with nonzero mass
+		double onFraction;
+
+		// Hyperparameter on blob radii
+		double muRadius;
+
+		// Hyperparameter on blob masses
+		double muMass;
+
 		// Uniform latent variables
 		// (position, position, size, mass)
 		std::vector< std::vector<double> > U;
@@ -33,6 +45,9 @@ class Blobby:public Profile
 		// Print parameters
 		void print(std::ostream& out) const;
 
+		// Transform U values into actual parameters
+		void transform(const std::vector<double>& U,
+				std::vector<double>& params) const;
 };
 
 #endif
