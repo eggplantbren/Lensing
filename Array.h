@@ -14,6 +14,10 @@ class Array
 
 	public:
 		Array(int ni, int nj);
+		Array(int ni, int nj, const Type& value);
+
+		// Set all elements to given value
+		void set(const Type& value);
 
 		// Element access
 		Type& operator () (int i, int j);

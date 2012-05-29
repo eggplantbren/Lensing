@@ -11,6 +11,22 @@ Array<Type>::Array(int ni, int nj)
 }
 
 template<typename Type>
+Array<Type>::Array(int ni, int nj, const Type& value)
+:ni(ni), nj(nj)
+,size(ni*nj)
+,data(size, value)
+{
+	assert(ni >= 0 && nj >= 0);
+}
+
+template<typename Type>
+void Array<Type>::set(const Type& value)
+{
+	for(int i=0; i<size; i++)
+		data[i] = value;
+}
+
+template<typename Type>
 Type& Array<Type>::operator () (int i, int j)
 {
 	assert(i >= 0 && i < ni && j >= 0 && j < nj);
