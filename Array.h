@@ -21,7 +21,7 @@ class Array
 
 		// Element access
 		Type& operator () (int i, int j);
-		Type  operator () (int i, int j) const;
+		const Type&  operator () (int i, int j) const;
 
 		// Get size
 		int get_ni() const { return ni; }

@@ -34,7 +34,7 @@ Type& Array<Type>::operator () (int i, int j)
 }
 
 template<typename Type>
-Type Array<Type>::operator () (int i, int j) const
+const Type& Array<Type>::operator () (int i, int j) const
 {
 	assert(i >= 0 && i < ni && j >= 0 && j < nj);
 	return data[nj*i + j];
