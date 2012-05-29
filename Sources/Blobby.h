@@ -26,9 +26,10 @@ class Blobby:public Profile
 		// Hyperparameter on blob masses
 		double muMass;
 
-		// Uniform latent variables
-		// (position, position, size, mass)
-		std::vector< std::vector<double> > U;
+		// Positions, masses, radii
+		std::vector<double> xc, yc;
+		std::vector<double> mass;
+		std::vector<double> radius;
 
 	public:
 		Blobby();
@@ -44,10 +45,6 @@ class Blobby:public Profile
 
 		// Print parameters
 		void print(std::ostream& out) const;
-
-		// Transform U values into actual parameters
-		void transform(const std::vector<double>& U,
-				std::vector<double>& params) const;
 };
 
 #endif
