@@ -20,12 +20,17 @@ class Blobby:public Profile
 		// Hyperhyperparameters
 		static const double minMuRadius, maxMuRadius, rangeMuRadius;
 		static const double minMuMass, maxMuMass, rangeMuMass;
+		static const double minX0, maxX0, rangeX0;
+		static const double minY0, maxY0, rangeY0;
 
 		// Hyperparameter on blob radii
 		double muRadius;
 
 		// Hyperparameter on blob masses
 		double muMass;
+
+		// Hyperparameters - centre of blob distribution
+		double x0, y0;
 
 		// Positions, masses, radii
 		std::vector<double> xc, yc;

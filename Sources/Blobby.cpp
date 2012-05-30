@@ -14,6 +14,14 @@ const double Blobby::rangeMuRadius = log(Blobby::maxMuRadius/Blobby::minMuRadius
 const double Blobby::minMuMass = 1E-3;
 const double Blobby::maxMuMass = 1E3;
 const double Blobby::rangeMuMass = log(Blobby::maxMuMass/Blobby::minMuMass);
+const double Blobby::minX0 = -1.;
+const double Blobby::maxX0 =  1.;
+const double Blobby::rangeX0 = Blobby::maxX0 - Blobby::minX0;
+const double Blobby::minY0 = -1.;
+const double Blobby::maxY0 =  1.;
+const double Blobby::rangeY0 = Blobby::maxY0 - Blobby::minY0;
+
+
 
 Blobby::Blobby()
 {
@@ -22,9 +30,9 @@ Blobby::Blobby()
 
 void Blobby::fromPrior()
 {
-	muRadius = 1.;
-	muMass = 1.;
-
+	muRadius = exp(log(minMuMass) + rangeMuMass*randomU());
+	muMass = exp(log(minMuRadius) + rangeMuRadius*randomU());
+	
 }
 
 double Blobby::evaluate(double x, double y) const
