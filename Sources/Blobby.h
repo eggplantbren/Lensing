@@ -32,7 +32,11 @@ class Blobby:public Profile
 		// Hyperparameters - centre of blob distribution
 		double x0, y0;
 
+		// Hyperparameters - ellipticity of blob distribution
+		double q, theta, cosTheta, sinTheta;
+
 		// Positions, masses, radii
+		int numBlobs;
 		std::vector<double> xc, yc;
 		std::vector<double> mass;
 		std::vector<double> radius;

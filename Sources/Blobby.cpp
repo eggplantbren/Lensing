@@ -21,8 +21,6 @@ const double Blobby::minY0 = -1.;
 const double Blobby::maxY0 =  1.;
 const double Blobby::rangeY0 = Blobby::maxY0 - Blobby::minY0;
 
-
-
 Blobby::Blobby()
 {
 
@@ -32,7 +30,18 @@ void Blobby::fromPrior()
 {
 	muRadius = exp(log(minMuMass) + rangeMuMass*randomU());
 	muMass = exp(log(minMuRadius) + rangeMuRadius*randomU());
-	
+	x0 = minX0 + rangeX0*randomU();
+	y0 = minY0 + rangeY0*randomU();
+	q = exp(randn());
+	theta = 2*M_PI*randomU(); cosTheta = cos(theta); sinTheta = sin(theta);
+
+	numBlobs = randInt(maxNumBlobs + 1);
+	xc.resize(numBlobs); yc.resize(numBlobs);
+	mass.resize(numBlobs); radius.resize(numBlobs);
+	for(int i=0; i<numBlobs; i++)
+	{
+		
+	}
 }
 
 double Blobby::evaluate(double x, double y) const
