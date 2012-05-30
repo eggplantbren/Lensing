@@ -8,6 +8,12 @@ using namespace DNest3;
 
 const int Blobby::maxNumBlobs = 100;
 const double Blobby::maxSigmaSquaredEval = 100.;
+const double Blobby::minMuRadius = 1E-3;
+const double Blobby::maxMuRadius = 1E3;
+const double Blobby::rangeMuRadius = log(Blobby::maxMuRadius/Blobby::minMuRadius);
+const double Blobby::minMuMass = 1E-3;
+const double Blobby::maxMuMass = 1E3;
+const double Blobby::rangeMuMass = log(Blobby::maxMuMass/Blobby::minMuMass);
 
 Blobby::Blobby()
 {

@@ -17,8 +17,9 @@ class Blobby:public Profile
 		// Precision
 		static const double maxSigmaSquaredEval;
 
-		// Fraction of blobs with nonzero mass
-		double onFraction;
+		// Hyperhyperparameters
+		static const double minMuRadius, maxMuRadius, rangeMuRadius;
+		static const double minMuMass, maxMuMass, rangeMuMass;
 
 		// Hyperparameter on blob radii
 		double muRadius;
